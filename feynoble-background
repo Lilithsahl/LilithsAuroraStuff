@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Fey Noble</name>
+		<description>Fey Noble Background</description>
+		<author url="https://www.reddit.com/user/LilithSahl">Lilithsahl</author>
+		<update version="0.1.0">
+			<file name="feynoble-background.xml" url="https://raw.githubusercontent.com/Lilithsahl/LilithsAuroraStuff/master/derp.xml" />
+		</update>
+	</info>
+
+	<element name="Fey Noble" type="Background" source="Lilithsahl's Fey Backgrounds" id="ID_LILITHSAHL_LFB_BACKGROUND_FEY_NOBLE">
+		<description>
+			<p>You were born or adopted as a child of a noble fey family, and were accordingly raised as one of them. Was your family Seelie or Unseelie? How loyal are they to their Court? How loyal are you expected to be to your family and your Court? At any rate, you have left the Feywild and come to the material plane, perhaps as a messenger, a runaway, an enforcer, or an assassin...</p>
+			<p>Based on Rachel Ghoul's Feytouched background.</p>
+			<ul class="unstyled">
+				<li><strong>Skill Proficiencies:</strong> Arcana, plus your choice of one among Deception, Intimidation, Performance, or Persuasion</li>
+				<li><strong>Languages (Optional):</strong> Sylvan, plus one of your choice</li>
+				<li><strong>Equipment:</strong> A set of fine clothes, a token indicating your family and Court affiliation, and a purse containing 15 gp.</li>
+			</ul>
+			<div element="ID_LILITHSAHL_LFB_FEY_NOBLE_FEY_COURTIER" />
+			<h5>SUGGESTED CHARACTERISTICS</h5>
+			<p>Mercurial and hard to comprehend for the average mortal, your disposition could be sunny and warm as the spring afternoon, cold and cruel as a winter midnight, calm and collected as a fall morning, or frenzied and energetic as a summer day. Your emotions are strong. If you are aligned as a Seelie or Unseelie, you may feel a certain set of emotions, such as happiness and anger for the Seelie, or sorrow and jealousy as an Unseelie, more strongly than others, and you may default to a certain emotion despite having no other reason for it.</p>
+			<p class="indent">Magic and nature are an integral part of you and your understanding of the world. Fey nobility tends to range towards more magical occupations, but they are plenty capable of deadly grace in melee combat. Indeed, war and bloodshed is a part of your blood, as the Courts have waged friendly competition and outright bloody war for thousands of years--and that's not counting the layers of hushed whispers and intrigue that underlie every interaction with a fey noble. Both Seelie and Unseelie are capable of great bloodshed and intrigue, but their opinions sharply divide on material realm races, or "mortals." You may believe them to be occasionally useful and/or entertaining, but otherwise low-bred creatures, as the Seelie do, or you may belive them to be deeply interesting and useful creatures who are worthy of their own merit, albeit perhaps not as much as another fey, as the Unseelie might. (Both Courts certainly use and manipulate them as toys.)</p>
+		</description>
+		<setters>
+			<set name="short">Arcana, 1 Deception / Intimidation / Performance / Persuasion, Sylvan, 1 Language</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+			<select type="Proficiency" name="Skill Proficiency (Fey Noble)" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERFORMANCE|ID_PROFICIENCY_SKILL_PERSUASION" />
+			<grant type="Language" id="ID_LANGUAGE_SYLVAN" />
+			<select type="Language" name="Language (Fey Noble)" supports="Standard||Exotic" number="1" />
+			<grant type="Background Feature" id="ID_LILITHSAHL_LFB_FEY_NOBLE_FEY_COURTIER" />
+			<select name="Personality Trait" type="List">
+				<item id="1">I am only really familiar with the customs and habits of the Feywild, so I seem strange and unusual.</item>
+				<item id="2">People mistake me for being highly superstitious because I take every opportunity to appease any of the fey that might live nearby.</item>
+				<item id="3">I grew up around such strange beauty that I find myself somewhat blase about the world.</item>
+				<item id="4">I was treated harshly as a child of my cruel fey family, and am somewhat fearful and submissive.</item>
+				<item id="5">I was a favored child of the fey and have a spoiled and entitled attitude.</item>
+				<item id="6">I am bizarrely joyful and prone to jokes, songs, or dance.</item>
+			</select>
+			<select name="Ideal" type="List">
+				<item id="1">Stringency: I hold myself and everyone I make deals with to the exact letter of their word, as the fey do. (Lawful)</item>
+				<item id="2">Cruelty: My family treated each other, including myself, coldly and cruelly, and I will do the same if I can to others. (Evil)</item>
+				<item id="3">Freedom: The Feywild has none of the strict rules of material plane society, so I am seen as "free-spirited" compared to most, and I encourage others to embrace this, too. (Chaotic)</item>
+				<item id="4">Unpredictability: Things in my home were often strange, and I always expect the unexpected. (Chaotic)</item>
+				<item id="5">Wonder: Things in the Feywild are so amazing, I wish to share that beauty with the world! (Good)</item>
+				<item id="6">Curiosity: The Material Plane is so different from the Feywild, it's exciting to see what it has to offer. (Neutral)</item>
+			</select>
+			<select name="Bond" type="List">
+				<item id="1">I am on the run from my wicked family.</item>
+				<item id="2">Someone in my family, or elsewhere in the Feywild, owes me a favor that one day I'd like to collect if I see them again.</item>
+				<item id="3">I was betrothed to one of the fey before I left.</item>
+				<item id="4">I won something valuable in a game with another noble fey--and the loser isn't happy.</item>
+				<item id="5">I bargained away something irreplaceable, like my memories or my power, for something or someone else.</item>
+				<item id="6">I have friends in the Feywild I dearly love and want to see again.</item>
+			</select>
+			<select name="Flaw" type="List">
+				<item id="1">I am the child of a lord or lady of the Feywild. Mere mortals are beneath me.</item>
+				<item id="2">I never quite seem to fit in, no matter where I go.</item>
+				<item id="3">I was... punished for something I did, and not in a nondescript way. People stare.</item>
+				<item id="4">I can be seen as unreliable or too whimsical for some because of my nature.</item>
+				<item id="5">Years of navigating the hostile social environment of the Feywild has embittered me.</item>
+				<item id="6">I've learned all too well to fear what magic, used in anger, can do.</item>
+			</select>
+		</rules>
+	</element>
+	<element name="Feature: Fey Courtier" type="Background Feature" source="Lilithsahl's Fey Backgrounds" id="ID_LILITHSAHL_LFB_FEY_NOBLE_FEY_COURTIER">
+		<supports>Background Feature</supports>
+		<description>
+			<p>You grew up among the fey, and are used to their bizarre customs, strange manners, and frequent shifts in logic. When interacting with fey, you can keep up with them as easily as others can with material plane societies.</p>
+		</description>
+		<sheet name="Fey Courtier" />
+	</element>
+</elements>
